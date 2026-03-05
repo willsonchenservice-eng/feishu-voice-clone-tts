@@ -1,14 +1,24 @@
 # Feishu Voice Clone TTS Skill
 
-使用火山引擎 TTS 将文本转换为语音，并发送到飞书。支持使用你自己克隆的声音！
+使用火山引擎 TTS 将文本转换为语音，并发送到飞书。
 
-## 在火山引擎上克隆你的声音
+支持两种方式：
+1. 使用火山引擎预置的声音
+2. 使用你自己克隆的声音
 
-### 1. 声音克隆
+## 火山引擎配置
+
+### 方式一：使用预置声音（无需克隆）
+
+https://console.volcengine.com/speech/new/experience/tts?projectName=default
+
+### 方式二：使用你自己克隆的声音
+
+#### 1. 声音克隆
 
 https://console.volcengine.com/speech/new/experience/clone?projectName=default
 
-### 2. 语音合成
+#### 2. 语音合成
 
 https://console.volcengine.com/speech/new/experience/tts?projectName=default
 
@@ -20,7 +30,7 @@ https://console.volcengine.com/speech/new/experience/tts?projectName=default
 - `FEISHU_APP_SECRET` - 飞书 App Secret
 - `FEISHU_CHAT_ID` - 飞书聊天 ID (user:xxx 或 chat:xxx)
 - `VOLC_API_KEY` - 火山引擎 API Key
-- `VOLC_VOICE_TYPE` - 火山引擎音色 ID
+- `VOLC_VOICE_TYPE` - 火山引擎音色 ID（预置声音或克隆声音均可）
 
 ## 使用
 

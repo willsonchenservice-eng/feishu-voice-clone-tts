@@ -1,16 +1,31 @@
 # Feishu Voice Clone TTS Skill
 
-一个 OpenClaw skill，使用火山引擎 TTS 将文本转换为语音，并发送到飞书。支持使用你自己克隆的声音！
+一个 OpenClaw skill，使用火山引擎 TTS 将文本转换为语音，并发送到飞书。
+
+支持两种方式：
+1. 使用火山引擎预置的声音
+2. 使用你自己克隆的声音
 
 ## 功能特性
 
 - 支持单聊和群聊
-- 使用火山引擎 TTS（支持音色克隆）
+- 使用火山引擎 TTS（支持预置声音和音色克隆）
 - 自动将音频转换为飞书支持的 Opus 格式
 
-## 在火山引擎上克隆你的声音
+## 火山引擎配置
 
-### 1. 声音克隆
+### 方式一：使用预置声音（无需克隆）
+
+直接在火山引擎控制台选择预置的声音：
+
+https://console.volcengine.com/speech/new/experience/tts?projectName=default
+
+- 获取火山引擎 API Key
+- 选择一个预置的声音，获取音色 ID
+
+### 方式二：使用你自己克隆的声音
+
+#### 1. 声音克隆
 
 首先，在火山引擎上克隆你想要的声音：
 
@@ -20,7 +35,7 @@ https://console.volcengine.com/speech/new/experience/clone?projectName=default
 - 等待声音克隆完成
 - 获取你的音色 ID
 
-### 2. 语音合成
+#### 2. 语音合成
 
 然后，使用语音合成 API 调用你克隆的声音：
 
@@ -32,7 +47,7 @@ https://console.volcengine.com/speech/new/experience/tts?projectName=default
 ## 前置要求
 
 - 飞书机器人应用（App ID, App Secret）
-- 火山引擎 API Key 和已克隆的音色 ID
+- 火山引擎 API Key 和音色 ID（预置声音或克隆声音均可）
 - OpenClaw 环境
 - ffmpeg 和 ffprobe
 
@@ -53,7 +68,7 @@ export FEISHU_APP_ID="你的飞书AppID"
 export FEISHU_APP_SECRET="你的飞书AppSecret"
 export FEISHU_CHAT_ID="user:你的用户OpenID"  # 或 chat:群聊ID
 export VOLC_API_KEY="你的火山引擎APIKey"
-export VOLC_VOICE_TYPE="你的音色ID"
+export VOLC_VOICE_TYPE="你的音色ID"  # 预置声音或克隆声音均可
 ```
 
 ### 3. 或使用配置文件
