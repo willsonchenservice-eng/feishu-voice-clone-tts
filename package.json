@@ -1,0 +1,7 @@
+{
+  "name": "feishu-morty-tts",
+  "version": "1.0.0",
+  "description": "OpenClaw skill for sending voice messages to Feishu using Volcengine TTS",
+  "author": "",
+  "license": "MIT"
+}

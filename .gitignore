@@ -1,0 +1,21 @@
+# Config files with secrets
+.volcengine_key
+.env
+.env.local
+
+# Temporary files
+*.mp3
+*.opus
+*.wav
+tmp/
+temp/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# OS
+.DS_Store
+Thumbs.db
