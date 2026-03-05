@@ -1,7 +1,7 @@
 {
-  "name": "feishu-morty-tts",
+  "name": "feishu-voice-clone-tts",
   "version": "1.0.0",
-  "description": "OpenClaw skill for sending voice messages to Feishu using Volcengine TTS",
+  "description": "OpenClaw skill for sending voice messages to Feishu using Volcengine TTS with custom voice clones",
   "author": "",
   "license": "MIT"
 }

@@ -1,6 +1,6 @@
-# Feishu Morty TTS Skill
+# Feishu Voice Clone TTS Skill
 
-一个 OpenClaw skill，使用火山引擎 TTS 将文本转换为语音，并发送到飞书。
+一个 OpenClaw skill，使用火山引擎 TTS 将文本转换为语音，并发送到飞书。支持使用你自己克隆的声音！
 
 ## 功能特性
 
@@ -8,10 +8,31 @@
 - 使用火山引擎 TTS（支持音色克隆）
 - 自动将音频转换为飞书支持的 Opus 格式
 
+## 在火山引擎上克隆你的声音
+
+### 1. 声音克隆
+
+首先，在火山引擎上克隆你想要的声音：
+
+https://console.volcengine.com/speech/new/experience/clone?projectName=default
+
+- 上传一段 5-30 秒的清晰音频样本
+- 等待声音克隆完成
+- 获取你的音色 ID
+
+### 2. 语音合成
+
+然后，使用语音合成 API 调用你克隆的声音：
+
+https://console.volcengine.com/speech/new/experience/tts?projectName=default
+
+- 获取火山引擎 API Key
+- 使用你克隆的音色 ID 进行语音合成
+
 ## 前置要求
 
 - 飞书机器人应用（App ID, App Secret）
-- 火山引擎 API Key 和已克隆的音色
+- 火山引擎 API Key 和已克隆的音色 ID
 - OpenClaw 环境
 - ffmpeg 和 ffprobe
 
@@ -22,7 +43,7 @@
 将此目录复制到 OpenClaw 的 skills 目录：
 
 ```bash
-cp -r feishu-morty-tts ~/.openclaw/skills/
+cp -r feishu-voice-clone-tts ~/.openclaw/skills/
 ```
 
 ### 2. 配置环境变量
