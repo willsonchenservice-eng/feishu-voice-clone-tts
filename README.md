@@ -61,6 +61,14 @@ https://console.volcengine.com/speech/new/experience/tts?projectName=default
 cp -r feishu-voice-clone-tts ~/.openclaw/skills/
 ```
 
+安装 Python 依赖，并确认系统中存在 `ffmpeg` 和 `ffprobe`：
+
+```bash
+python3 -m pip install -r requirements.txt
+ffmpeg -version
+ffprobe -version
+```
+
 ### 2. 配置环境变量
 
 ```bash

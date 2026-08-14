@@ -1,0 +1,4 @@
+interface:
+  display_name: "Feishu Voice Clone TTS"
+  short_description: "使用火山引擎 TTS 合成语音，并安全发送到指定飞书会话"
+  default_prompt: "使用 $feishu-voice-clone-tts 把这段文字合成为语音；发送前先确认接收方和最终文本。"
